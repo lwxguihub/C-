@@ -1,0 +1,67 @@
+# Project: ½±ÅÆ°ñ
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o login.o menu.o choice1.o sportman.o Project.o title.o rank.o edit.o team.o country.o country1.o adrank.o arank.o
+LINKOBJ  = main.o login.o menu.o choice1.o sportman.o Project.o title.o rank.o edit.o team.o country.o country1.o adrank.o arank.o
+LIBS     = -L"F:/APP/Dev c++/Dev-Cpp/MinGW64/lib" -L"F:/APP/Dev c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -leasyx  -lgdi32  -lole32 -g3
+INCS     = -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/include" -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/include" -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/APP/Dev c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ½±ÅÆ°ñ.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+login.o: login.cpp
+	$(CPP) -c login.cpp -o login.o $(CXXFLAGS)
+
+menu.o: menu.cpp
+	$(CPP) -c menu.cpp -o menu.o $(CXXFLAGS)
+
+choice1.o: choice1.cpp
+	$(CPP) -c choice1.cpp -o choice1.o $(CXXFLAGS)
+
+sportman.o: sportman.cpp
+	$(CPP) -c sportman.cpp -o sportman.o $(CXXFLAGS)
+
+Project.o: Project.cpp
+	$(CPP) -c Project.cpp -o Project.o $(CXXFLAGS)
+
+title.o: title.cpp
+	$(CPP) -c title.cpp -o title.o $(CXXFLAGS)
+
+rank.o: rank.cpp
+	$(CPP) -c rank.cpp -o rank.o $(CXXFLAGS)
+
+edit.o: edit.cpp
+	$(CPP) -c edit.cpp -o edit.o $(CXXFLAGS)
+
+team.o: team.cpp
+	$(CPP) -c team.cpp -o team.o $(CXXFLAGS)
+
+country.o: country.cpp
+	$(CPP) -c country.cpp -o country.o $(CXXFLAGS)
+
+country1.o: country1.cpp
+	$(CPP) -c country1.cpp -o country1.o $(CXXFLAGS)
+
+adrank.o: adrank.cpp
+	$(CPP) -c adrank.cpp -o adrank.o $(CXXFLAGS)
+
+arank.o: arank.cpp
+	$(CPP) -c arank.cpp -o arank.o $(CXXFLAGS)
